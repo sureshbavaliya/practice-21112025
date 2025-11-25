@@ -21,3 +21,8 @@ module "frontend_vm" {
   source     = "../modules/azurerm_virtual_machine"
   vms        = var.vms
 }
+module "nsg" {
+  depends_on = [module.azurerm_virtual_network, module.resource_group]
+  source     = "../modules/azurerm_security_group"
+  nsg        = var.nsg
+}

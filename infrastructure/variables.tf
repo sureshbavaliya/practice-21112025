@@ -6,3 +6,4 @@ variable "vms" {}
 
 variable "pip" {}
 
+variable "nsg" {}

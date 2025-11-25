@@ -57,3 +57,23 @@ pip = {
     }
   }
 }
+
+nsg = {
+  nsg1 = {
+    name     = "nsg-001"
+    rg_name  = "suresh-rg"
+    location = "central india"
+
+    security_rule = {
+      name                       = "nsg-001"
+      priority                   = 100
+      direction                  = "Inbound"
+      access                     = "Allow"
+      protocol                   = "Tcp"
+      source_port_range          = "*"
+      destination_port_range     = "*"
+      source_address_prefix      = "*"
+      destination_address_prefix = "*"
+    }
+  }
+}
