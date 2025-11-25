@@ -1,0 +1,4 @@
+variable "sqldb" {
+    type = string
+  
+}
