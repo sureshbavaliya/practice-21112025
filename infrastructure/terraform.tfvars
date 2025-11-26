@@ -38,6 +38,7 @@ vms = {
     pip                 = "frontend-pip"
     subnet_name         = "frontend-subnet"
     backend_subnet_name = "backend-subnet"
+    public_ip           = "pip1"
   }
 }
 

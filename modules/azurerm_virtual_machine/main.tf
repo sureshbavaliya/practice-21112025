@@ -12,6 +12,7 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 
+
 resource "azurerm_linux_virtual_machine" "frontend-vm" {
   for_each                        = var.vms
   name                            = each.value.name
@@ -22,6 +23,8 @@ resource "azurerm_linux_virtual_machine" "frontend-vm" {
   admin_password                  = each.value.admin_password
   disable_password_authentication = false
   network_interface_ids           = [data.azurerm_network_interface.nic[each.key].id]
+  public_ip_address_id            = each.value.public_ip_address_id
+
 
 
 
